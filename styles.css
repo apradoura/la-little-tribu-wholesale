@@ -155,3 +155,29 @@ footer h1, footer h2, footer h3,
 .social-footer h1, .social-footer h2, .social-footer h3{
   color:var(--ink) !important;
 }
+
+
+/* V0.7.7 — fix cible du vrai footer .pro-footer */
+.pro-footer{
+  background:linear-gradient(135deg,#fffdf9 0%,#f6efe8 100%) !important;
+  color:var(--ink) !important;
+  border-top:1px solid var(--line) !important;
+}
+.pro-footer h2,
+.pro-footer p,
+.pro-footer span,
+.pro-footer strong,
+.pro-footer .footer-grid{
+  color:var(--ink) !important;
+}
+.pro-footer .eyebrow{
+  color:var(--wine) !important;
+  opacity:1 !important;
+}
+.pro-footer .social-links a{
+  color:var(--ink) !important;
+}
+.pro-footer .social-links a:hover{
+  color:var(--wine) !important;
+  opacity:1 !important;
+}

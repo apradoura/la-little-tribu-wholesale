@@ -22,3 +22,6 @@ V0.7.5 : footer repasse sur le meme fond creme/ivoire que le hero et les bandeau
 
 
 V0.7.6 : correction complete des couleurs du footer sur fond clair (titres, liens, texte secondaire).
+
+
+V0.7.7 : correction cible de `.pro-footer`, la vraie classe utilisée par le rendu.
