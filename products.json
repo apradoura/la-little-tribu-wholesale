@@ -7,23 +7,23 @@
     "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
       "Rose pale",
-      "Parme",
+      "parme",
       "Jaune",
       "Vert Pâle",
       "Bleu",
-      "Menthe",
-      "Crème",
+      "menthe",
+      "crème",
       "Orange",
       "Beige",
-      "Bleu ciel",
+      "bleu ciel",
       "Rouge",
-      "Bleu roi",
+      "bleu roi",
       "Noir",
       "Rose Fluo",
       "Blanc",
       "Rose",
-      "Chocolat",
-      "Bleu pâle",
+      "chocolat",
+      "bleu pâle",
       "Bordeaux"
     ],
     "note": "Bracelet cœur coloré, à porter seul ou en accumulation."
@@ -36,7 +36,7 @@
     "source": "https://lalittletribu.fr/collections/bracelets/products/bracelet-maxi-coeur-leo",
     "variants": [
       "Sans tissu",
-      "Avec tissu assorti"
+      "Avec Tissu assorti"
     ],
     "note": "Le cœur iconique en version maxi, aux nuances ambrées et léopard."
   },
@@ -48,7 +48,7 @@
     "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
       "Rouge",
-      "Bleu marine"
+      "bleu marine"
     ],
     "note": "Version maxi du bracelet cœur, graphique et colorée."
   },
@@ -59,18 +59,9 @@
     "category": "Colliers",
     "source": "https://lalittletribu.fr/products/collier-medaille-saint-benoit-le-protecteur",
     "variants": [
-      "Violet · Cordon",
-      "Vert · Cordon",
-      "Orange · Cordon",
-      "Dorée · Cordon",
-      "Violet · Chaîne dorée 40 cm",
-      "Vert · Chaîne dorée 40 cm",
-      "Orange · Chaîne dorée 40 cm",
-      "Dorée · Chaîne dorée 40 cm",
-      "Chaîne dorée 60 cm",
-      "Chaîne boules dorées 50 cm"
+      "Voir options sur LLT"
     ],
-    "note": "Médaille colorée associée à la protection, montée à la main."
+    "note": "Médaille colorée associée à la protection."
   },
   {
     "id": "iconique",
@@ -79,20 +70,9 @@
     "category": "Colliers",
     "source": "https://lalittletribu.fr/products/collier-medaille-en-pierre-naturelle-liconique",
     "variants": [
-      "Quartz rose · Cordon jaune",
-      "Quartz rose · Cordon vert",
-      "Quartz rose · Cordon violet",
-      "Quartz rose · Cordon parme",
-      "Lapis-lazuli · Cordon jaune",
-      "Lapis-lazuli · Cordon vert",
-      "Lapis-lazuli · Cordon violet",
-      "Pierre verte · Cordon jaune",
-      "Pierre verte · Cordon vert",
-      "Chaîne dorée 40 cm",
-      "Chaîne dorée 60 cm",
-      "Chaîne dorée boules 50 cm"
+      "Voir options sur LLT"
     ],
-    "note": "Pierre naturelle, médaille facettée et montage au choix."
+    "note": "Pierre naturelle et montage au choix."
   },
   {
     "id": "pochette-bisous",
@@ -102,8 +82,8 @@
     "source": "https://lalittletribu.fr/collections/accessoires/products/pochette-matelassee-bisous",
     "variants": [
       "Rouge",
-      "Crème",
-      "Bleu pâle"
+      "crème",
+      "bleu pâle"
     ],
     "note": "Pochette matelassée légère avec étiquette BISOU ♥."
   },
@@ -112,16 +92,11 @@
     "name": "Bracelet Talisman en Pierre Naturelle",
     "price": "32 €",
     "category": "Bracelets",
-    "source": "https://lalittletribu.fr/collections/bracelets/products/bracelet-talisman-en-pierre-naturelle",
+    "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
-      "Lapis Lazuli · Violet",
-      "Lapis Lazuli · Vert",
-      "Lapis Lazuli · Jaune",
-      "Cristal de Roche · Violet",
-      "Cristal de Roche · Vert",
-      "Cristal de Roche · Jaune"
+      "Voir options sur LLT"
     ],
-    "note": "Pierre naturelle et cordon ajustable, pensé comme un petit porte-bonheur."
+    "note": "Pierre naturelle et cordon ajustable."
   },
   {
     "id": "medaille-miraculeuse",
@@ -131,7 +106,7 @@
     "source": "https://lalittletribu.fr/collections/medailles-et-pendentifs",
     "variants": [
       "Jaune",
-      "Saumon",
+      "saumon",
       "Orange",
       "Bleu",
       "Vert",
@@ -177,18 +152,18 @@
       "Jaune",
       "Vert Pâle",
       "Beige",
-      "Bleu ciel",
+      "bleu ciel",
       "Violet",
       "Rouge",
       "Orange",
-      "Menthe",
-      "Bleu roi",
-      "Chocolat",
-      "Crème",
-      "Parme",
+      "menthe",
+      "bleu roi",
+      "chocolat",
+      "crème",
+      "parme",
       "Rose pale",
-      "Rose fluo",
-      "Bleu pâle"
+      "rose fluo",
+      "bleu pâle"
     ],
     "note": "Le bracelet cœur décliné pour les petits poignets."
   }

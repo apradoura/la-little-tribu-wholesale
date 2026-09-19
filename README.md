@@ -1,28 +1,25 @@
-# La Little Tribu Wholesale — V0.2
+# La Little Tribu Wholesale — V0.3
 
-Prototype GitHub Pages.
+## Nouveauté principale
+Le front tente maintenant de charger directement la collection Shopify :
+`https://lalittletribu.fr/collections/nouveautes/products.json?limit=250`
 
-## Périmètre
-- Source catalogue pilote : collection `Nouveautés` de lalittletribu.fr
-- 11 références
-- Prix affichés : prix publics observés sur le site, jamais prix wholesale
-- Sélection par variante + quantité
-- Identification demandée au moment de composer une sélection, pas à l'arrivée
-- UTM / `src` conservés localement
-- Mode édition : ajouter `?edit=1`
+Si l'appel cross-origin est accepté par Shopify :
+- titres
+- prix
+- variantes
+- liens produits
+- vraies images Shopify
 
-## Important
-Les leads, événements et sélections sont encore stockés dans `localStorage`.
-Cette V0.2 sert à valider UX / DA / parcours commercial.
-Aucune donnée prospect réelle ne doit encore être considérée comme collectée par LLT.
+sont utilisés automatiquement.
 
-## Déploiement GitHub Pages
-Mettre `index.html`, `app.js`, `styles.css`, `products.json` et `README.md`
-à la racine de `main`.
-GitHub Pages : `Deploy from a branch` → `main` → `/ (root)`.
+Si le navigateur bloque CORS, le front retombe sur `products.json`.
+Le bandeau en haut indique alors `Catalogue local`.
 
-## V0.3
-- médias Shopify réels
-- récupération automatisée catalogue
-- persistance serveur des leads et sélections
-- dashboard Barbara / tracking
+## Test
+Après déploiement, regarder en haut :
+- `Catalogue LLT live` = connexion directe réussie.
+- `Catalogue local` = CORS bloqué ; prochaine étape = synchronisation via GitHub Action / backend.
+
+## Sécurité
+Aucune donnée sensible, aucun prix wholesale, aucune clé Shopify.
