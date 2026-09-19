@@ -1,37 +1,28 @@
-# La Little Tribu — Wholesale V0.1
+# La Little Tribu Wholesale — V0.2
 
-Prototype du showroom professionnel La Little Tribu.
+Prototype GitHub Pages.
 
-## Fonctionnalités
-- Landing B2B / Wholesale
-- Capture lead : nom, boutique, email, téléphone, localisation
-- Tracking de source via UTM / `src`
-- Showroom nouveautés
-- Variantes + quantités
-- Ma sélection
-- Export prospect + sélection
-- Mode édition Barbara via `?edit=1`
+## Périmètre
+- Source catalogue pilote : collection `Nouveautés` de lalittletribu.fr
+- 11 références
+- Prix affichés : prix publics observés sur le site, jamais prix wholesale
+- Sélection par variante + quantité
+- Identification demandée au moment de composer une sélection, pas à l'arrivée
+- UTM / `src` conservés localement
+- Mode édition : ajouter `?edit=1`
 
-## Mode édition
-Ajouter `?edit=1` à l'URL publiée.
+## Important
+Les leads, événements et sélections sont encore stockés dans `localStorage`.
+Cette V0.2 sert à valider UX / DA / parcours commercial.
+Aucune donnée prospect réelle ne doit encore être considérée comme collectée par LLT.
 
-Les changements sont actuellement stockés dans le navigateur et peuvent être exportés. Une V0.2 pourra ajouter une édition persistante.
+## Déploiement GitHub Pages
+Mettre `index.html`, `app.js`, `styles.css`, `products.json` et `README.md`
+à la racine de `main`.
+GitHub Pages : `Deploy from a branch` → `main` → `/ (root)`.
 
-## Déploiement
-Le dépôt contient un workflow GitHub Pages. Chaque push sur `main` redéploie automatiquement le prototype.
-
-Dans GitHub : **Settings → Pages → Source: GitHub Actions**.
-
-## Tracking de campagne
-Exemples :
-
-- `?utm_source=bijorhca&utm_medium=qr&utm_campaign=wholesale_2026`
-- `?src=barbara`
-
-## Suite prévue
-1. Connexion produits Shopify
-2. Vraies images LLT
-3. Stockage persistant des leads
-4. Demande de compte B2B
-5. Tarifs et catalogues professionnels
-6. Relances CRM / automatisées
+## V0.3
+- médias Shopify réels
+- récupération automatisée catalogue
+- persistance serveur des leads et sélections
+- dashboard Barbara / tracking

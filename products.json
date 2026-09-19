@@ -1,83 +1,134 @@
 [
   {
-    "id": "coeur",
+    "id": "bracelet-coeur",
     "name": "Bracelet C❤️EUR",
-    "public_price": "Dès 18 €",
+    "price": "Dès 18 €",
     "category": "Bracelets",
+    "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
-      "Rose pâle",
+      "Rose pale",
       "Parme",
       "Jaune",
-      "Vert pâle",
+      "Vert Pâle",
       "Bleu",
       "Menthe",
       "Crème",
       "Orange",
+      "Beige",
+      "Bleu ciel",
+      "Rouge",
+      "Bleu roi",
+      "Noir",
+      "Rose Fluo",
+      "Blanc",
+      "Rose",
+      "Chocolat",
+      "Bleu pâle",
       "Bordeaux"
-    ]
+    ],
+    "note": "Bracelet cœur coloré, à porter seul ou en accumulation."
   },
   {
-    "id": "maxi-leo",
+    "id": "maxi-coeur-leo",
     "name": "Bracelet Maxi Coeur Léo",
-    "public_price": "Dès 25 €",
+    "price": "Dès 25 €",
     "category": "Bracelets",
+    "source": "https://lalittletribu.fr/collections/bracelets/products/bracelet-maxi-coeur-leo",
     "variants": [
-      "Léo"
-    ]
+      "Sans tissu",
+      "Avec tissu assorti"
+    ],
+    "note": "Le cœur iconique en version maxi, aux nuances ambrées et léopard."
   },
   {
     "id": "maxi-coeur",
     "name": "Bracelet MAXI C❤️EUR",
-    "public_price": "22 €",
+    "price": "22 €",
     "category": "Bracelets",
+    "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
       "Rouge",
       "Bleu marine"
-    ]
+    ],
+    "note": "Version maxi du bracelet cœur, graphique et colorée."
   },
   {
-    "id": "st-benoit",
+    "id": "saint-benoit",
     "name": "Collier Médaille Saint Benoit le protecteur",
-    "public_price": "Dès 29 €",
+    "price": "Dès 29 €",
     "category": "Colliers",
+    "source": "https://lalittletribu.fr/products/collier-medaille-saint-benoit-le-protecteur",
     "variants": [
-      "Doré"
-    ]
+      "Violet · Cordon",
+      "Vert · Cordon",
+      "Orange · Cordon",
+      "Dorée · Cordon",
+      "Violet · Chaîne dorée 40 cm",
+      "Vert · Chaîne dorée 40 cm",
+      "Orange · Chaîne dorée 40 cm",
+      "Dorée · Chaîne dorée 40 cm",
+      "Chaîne dorée 60 cm",
+      "Chaîne boules dorées 50 cm"
+    ],
+    "note": "Médaille colorée associée à la protection, montée à la main."
   },
   {
     "id": "iconique",
     "name": "Collier Médaille en pierre naturelle - L'Iconique",
-    "public_price": "Dès 39 €",
+    "price": "Dès 39 €",
     "category": "Colliers",
+    "source": "https://lalittletribu.fr/products/collier-medaille-en-pierre-naturelle-liconique",
     "variants": [
-      "Pierre naturelle"
-    ]
+      "Quartz rose · Cordon jaune",
+      "Quartz rose · Cordon vert",
+      "Quartz rose · Cordon violet",
+      "Quartz rose · Cordon parme",
+      "Lapis-lazuli · Cordon jaune",
+      "Lapis-lazuli · Cordon vert",
+      "Lapis-lazuli · Cordon violet",
+      "Pierre verte · Cordon jaune",
+      "Pierre verte · Cordon vert",
+      "Chaîne dorée 40 cm",
+      "Chaîne dorée 60 cm",
+      "Chaîne dorée boules 50 cm"
+    ],
+    "note": "Pierre naturelle, médaille facettée et montage au choix."
   },
   {
     "id": "pochette-bisous",
     "name": "Pochette matelassée Bisous",
-    "public_price": "18 €",
+    "price": "18 €",
     "category": "Accessoires",
+    "source": "https://lalittletribu.fr/collections/accessoires/products/pochette-matelassee-bisous",
     "variants": [
       "Rouge",
       "Crème",
       "Bleu pâle"
-    ]
+    ],
+    "note": "Pochette matelassée légère avec étiquette BISOU ♥."
   },
   {
     "id": "talisman",
     "name": "Bracelet Talisman en Pierre Naturelle",
-    "public_price": "32 €",
+    "price": "32 €",
     "category": "Bracelets",
+    "source": "https://lalittletribu.fr/collections/bracelets/products/bracelet-talisman-en-pierre-naturelle",
     "variants": [
-      "Pierre naturelle"
-    ]
+      "Lapis Lazuli · Violet",
+      "Lapis Lazuli · Vert",
+      "Lapis Lazuli · Jaune",
+      "Cristal de Roche · Violet",
+      "Cristal de Roche · Vert",
+      "Cristal de Roche · Jaune"
+    ],
+    "note": "Pierre naturelle et cordon ajustable, pensé comme un petit porte-bonheur."
   },
   {
-    "id": "miraculeuse",
+    "id": "medaille-miraculeuse",
     "name": "Médaille Miraculeuse colorée",
-    "public_price": "Dès 7 €",
-    "category": "Personnalisation",
+    "price": "Dès 7 €",
+    "category": "Pendentifs",
+    "source": "https://lalittletribu.fr/collections/medailles-et-pendentifs",
     "variants": [
       "Jaune",
       "Saumon",
@@ -85,45 +136,60 @@
       "Bleu",
       "Vert",
       "Noir",
-      "Rose fluo",
+      "Rose Fluo",
       "Violet"
-    ]
+    ],
+    "note": "Une médaille colorée à composer sur cordon ou chaîne."
   },
   {
     "id": "eclat",
-    "name": "Bracelet Éclat",
-    "public_price": "25 €",
+    "name": "Bracelet Eclat",
+    "price": "25 €",
     "category": "Bracelets",
+    "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
-      "Doré"
-    ]
+      "Modèle unique"
+    ],
+    "note": "Nouvelle référence bracelet de la collection LLT."
   },
   {
     "id": "croix",
     "name": "Croix Pierres fines",
-    "public_price": "Dès 39 €",
+    "price": "Dès 39 €",
     "category": "Colliers",
+    "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
       "Pierres fines"
-    ]
+    ],
+    "note": "Croix en pierres fines, à porter seule ou en accumulation."
   },
   {
     "id": "coeur-enfant",
-    "name": "Bracelet CŒUR Enfant",
-    "public_price": "15 €",
+    "name": "Bracelet COEUR Enfant",
+    "price": "15 €",
     "category": "Enfant",
+    "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
       "Rose",
       "Bleu",
       "Blanc",
       "Noir",
       "Jaune",
-      "Vert pâle",
+      "Vert Pâle",
       "Beige",
+      "Bleu ciel",
       "Violet",
       "Rouge",
       "Orange",
-      "Menthe"
-    ]
+      "Menthe",
+      "Bleu roi",
+      "Chocolat",
+      "Crème",
+      "Parme",
+      "Rose pale",
+      "Rose fluo",
+      "Bleu pâle"
+    ],
+    "note": "Le bracelet cœur décliné pour les petits poignets."
   }
 ]
