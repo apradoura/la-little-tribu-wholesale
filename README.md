@@ -1,25 +1,23 @@
-# La Little Tribu Wholesale — V0.3
+# La Little Tribu Wholesale — V0.4
 
-## Nouveauté principale
-Le front tente maintenant de charger directement la collection Shopify :
+## Ce qui change
+- vrai logo LLT dans l'en-tête
+- hero raccourci
+- grille produit plus dense
+- 2 colonnes sur mobile
+- quick-view produit
+- variantes + quantité dans la quick-view
+- ajout rapide à la sélection
+- libellé explicite `Prix public conseillé`
+- formulaire prospect seulement au premier ajout
+- catalogue Shopify `Nouveautés` toujours chargé en direct
+
+## Source Shopify
 `https://lalittletribu.fr/collections/nouveautes/products.json?limit=250`
 
-Si l'appel cross-origin est accepté par Shopify :
-- titres
-- prix
-- variantes
-- liens produits
-- vraies images Shopify
+Barbara continue donc à modifier les produits depuis Shopify.
+Le showroom suit automatiquement pour les titres, prix publics, variantes et images.
 
-sont utilisés automatiquement.
-
-Si le navigateur bloque CORS, le front retombe sur `products.json`.
-Le bandeau en haut indique alors `Catalogue local`.
-
-## Test
-Après déploiement, regarder en haut :
-- `Catalogue LLT live` = connexion directe réussie.
-- `Catalogue local` = CORS bloqué ; prochaine étape = synchronisation via GitHub Action / backend.
-
-## Sécurité
-Aucune donnée sensible, aucun prix wholesale, aucune clé Shopify.
+## Logo
+Le logo utilisé actuellement est le logo public du thème LLT.
+Si le logo de la boutique change plus tard, il faudra mettre à jour cette URL ou automatiser sa récupération.
