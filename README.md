@@ -13,3 +13,6 @@ MVP orienté revendeurs / concept stores.
 
 
 V0.7.3 : ajout d'un repere concept-store avant la collection pour qualifier immediatement l'affinite revendeur, sans ajouter de nouvelle sortie externe.
+
+
+V0.7.4 : suppression des bandeaux noirs et harmonisation sur le fond clair creme/ivoire du haut de page.
