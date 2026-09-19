@@ -1,15 +1,19 @@
-# La Little Tribu Wholesale — V0.5 / MVP démo Barbara
+# La Little Tribu — Wholesale Showroom V0.6
 
-Objectif : démontrer simplement la proposition de valeur.
+MVP orienté acquisition B2B / revendeurs.
 
-Parcours :
-Shopify live → découverte libre → choix produit/variante/quantité → sélection modifiable → finalisation → identification pro → confirmation.
+## Parcours
+La marque → Collaborer → Collection Shopify → Ma sélection → Qualification du projet → Contact.
 
-Points clés :
-- aucune identification avant la fin ;
-- produits/images/prix publics/variantes chargés depuis la collection Shopify `Nouveautés` ;
-- sélection conservée localement pendant la démo ;
-- aucun prix wholesale, MOQ, paiement ou commande inventé ;
-- le bouton final simule la transmission : aucune donnée n'est réellement envoyée à LLT dans ce MVP.
+## Principes
+- catalogue « Nouveautés » chargé depuis Shopify quand disponible ;
+- navigation libre sans identification préalable ;
+- prix affiché = prix public conseillé, jamais un tarif wholesale ;
+- sélection variantes + quantités ;
+- identification uniquement au moment de présenter la sélection ;
+- qualification : distribution / atelier-événement / collaboration / autre ;
+- liens vers l'histoire LLT, les ateliers, Instagram, le site et le contact professionnel ;
+- conservation UTM / `src` pour préparer les usages QR code / salons / prospection.
 
-Après validation du concept, la prochaine étape sera de connecter la transmission réelle de la sélection.
+## Important
+Cette version reste une démonstration : la sélection finale est stockée localement dans le navigateur. Aucun lead, commande ou paiement n'est réellement transmis. Aucun MOQ, tarif revendeur ou délai commercial n'est inventé.
