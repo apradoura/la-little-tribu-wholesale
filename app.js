@@ -1,6 +1,6 @@
 
 const SHOPIFY_COLLECTION="https://lalittletribu.fr/collections/nouveautes/products.json?limit=250";
-const LOGO_URL="https://lalittletribu.fr/cdn/shop/files/Lalittletribu_logo_VF_2a1e1503-fb7b-49b7-9c92-44832dae32e8.png?v=1732204972&width=350";
+const LOGO_URL="https://lalittletribu.fr/cdn/shop/files/LLT_logo_VF_2a1e1503-fb7b-49b7-9c92-44832dae32e8.png?v=1732204972&width=350";
 const state={products:[],source:"loading",selection:JSON.parse(localStorage.getItem("llt_selection_v06")||"[]"),category:"Tous"};
 const qs=new URLSearchParams(location.search);
 const campaign={source:qs.get("utm_source")||qs.get("src")||"direct",medium:qs.get("utm_medium")||"web",campaign:qs.get("utm_campaign")||"wholesale_demo"};
