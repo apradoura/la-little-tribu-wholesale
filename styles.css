@@ -41,3 +41,16 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}.desktop-nav{display:flex;ga
 
 /* V0.7.2 — pistes MVP visibles mais non cliquables */
 .inactive-link{display:inline-block;margin-top:10px;font-size:.92rem;font-weight:600;opacity:.55;cursor:default;}
+
+/* V0.7.3 — repere concept-store avant collection */
+.retail-fit{background:#171513;color:#fff;padding:34px 0}
+.retail-fit-inner{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.retail-fit h2{font-family:'Playfair Display',serif;font-size:clamp(24px,2.5vw,36px);line-height:1.08;margin:8px 0 0}
+.retail-fit .eyebrow{opacity:.65}
+.retail-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.retail-tags span{border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:9px 13px;font-size:12px;white-space:nowrap}
+@media(max-width:800px){
+  .retail-fit{padding:30px 0}
+  .retail-fit-inner{grid-template-columns:1fr;gap:22px}
+  .retail-tags{justify-content:flex-start}
+}
