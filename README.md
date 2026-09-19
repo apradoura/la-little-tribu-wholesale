@@ -1,4 +1,4 @@
-# La Little Tribu — Wholesale Showroom V0.6
+# Lalittletribu — Wholesale Showroom V0.6
 
 MVP orienté acquisition B2B / revendeurs.
 
@@ -12,7 +12,7 @@ La marque → Collaborer → Collection Shopify → Ma sélection → Qualificat
 - sélection variantes + quantités ;
 - identification uniquement au moment de présenter la sélection ;
 - qualification : distribution / atelier-événement / collaboration / autre ;
-- liens vers l'histoire LLT, les ateliers, Instagram, le site et le contact professionnel ;
+- liens vers l'histoire Lalittletribu, les ateliers, Instagram, le site et le contact professionnel ;
 - conservation UTM / `src` pour préparer les usages QR code / salons / prospection.
 
 ## Important
