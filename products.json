@@ -7,23 +7,23 @@
     "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
       "Rose pale",
-      "parme",
+      "Parme",
       "Jaune",
       "Vert Pâle",
       "Bleu",
-      "menthe",
-      "crème",
+      "Menthe",
+      "Crème",
       "Orange",
       "Beige",
-      "bleu ciel",
+      "Bleu ciel",
       "Rouge",
-      "bleu roi",
+      "Bleu roi",
       "Noir",
       "Rose Fluo",
       "Blanc",
       "Rose",
-      "chocolat",
-      "bleu pâle",
+      "Chocolat",
+      "Bleu pâle",
       "Bordeaux"
     ],
     "note": "Bracelet cœur coloré, à porter seul ou en accumulation."
@@ -36,9 +36,9 @@
     "source": "https://lalittletribu.fr/collections/bracelets/products/bracelet-maxi-coeur-leo",
     "variants": [
       "Sans tissu",
-      "Avec Tissu assorti"
+      "Avec tissu assorti"
     ],
-    "note": "Le cœur iconique en version maxi, aux nuances ambrées et léopard."
+    "note": "Le cœur iconique en version maxi."
   },
   {
     "id": "maxi-coeur",
@@ -48,9 +48,9 @@
     "source": "https://lalittletribu.fr/collections/nouveautes",
     "variants": [
       "Rouge",
-      "bleu marine"
+      "Bleu marine"
     ],
-    "note": "Version maxi du bracelet cœur, graphique et colorée."
+    "note": "Version maxi du bracelet cœur."
   },
   {
     "id": "saint-benoit",
@@ -82,10 +82,10 @@
     "source": "https://lalittletribu.fr/collections/accessoires/products/pochette-matelassee-bisous",
     "variants": [
       "Rouge",
-      "crème",
-      "bleu pâle"
+      "Crème",
+      "Bleu pâle"
     ],
-    "note": "Pochette matelassée légère avec étiquette BISOU ♥."
+    "note": "Pochette matelassée légère."
   },
   {
     "id": "talisman",
@@ -106,7 +106,7 @@
     "source": "https://lalittletribu.fr/collections/medailles-et-pendentifs",
     "variants": [
       "Jaune",
-      "saumon",
+      "Saumon",
       "Orange",
       "Bleu",
       "Vert",
@@ -114,7 +114,7 @@
       "Rose Fluo",
       "Violet"
     ],
-    "note": "Une médaille colorée à composer sur cordon ou chaîne."
+    "note": "Une médaille colorée à composer."
   },
   {
     "id": "eclat",
@@ -125,7 +125,7 @@
     "variants": [
       "Modèle unique"
     ],
-    "note": "Nouvelle référence bracelet de la collection LLT."
+    "note": "Nouvelle référence bracelet."
   },
   {
     "id": "croix",
@@ -136,7 +136,7 @@
     "variants": [
       "Pierres fines"
     ],
-    "note": "Croix en pierres fines, à porter seule ou en accumulation."
+    "note": "Croix en pierres fines."
   },
   {
     "id": "coeur-enfant",
@@ -152,19 +152,19 @@
       "Jaune",
       "Vert Pâle",
       "Beige",
-      "bleu ciel",
+      "Bleu ciel",
       "Violet",
       "Rouge",
       "Orange",
-      "menthe",
-      "bleu roi",
-      "chocolat",
-      "crème",
-      "parme",
+      "Menthe",
+      "Bleu roi",
+      "Chocolat",
+      "Crème",
+      "Parme",
       "Rose pale",
-      "rose fluo",
-      "bleu pâle"
+      "Rose fluo",
+      "Bleu pâle"
     ],
-    "note": "Le bracelet cœur décliné pour les petits poignets."
+    "note": "Le bracelet cœur pour les petits poignets."
   }
 ]
