@@ -16,3 +16,9 @@ V0.7.3 : ajout d'un repere concept-store avant la collection pour qualifier imme
 
 
 V0.7.4 : suppression des bandeaux noirs et harmonisation sur le fond clair creme/ivoire du haut de page.
+
+
+V0.7.5 : footer repasse sur le meme fond creme/ivoire que le hero et les bandeaux intermediaires.
+
+
+V0.7.6 : correction complete des couleurs du footer sur fond clair (titres, liens, texte secondaire).

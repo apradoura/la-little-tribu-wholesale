@@ -68,3 +68,90 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}.desktop-nav{display:flex;ga
   .retail-fit-inner{grid-template-columns:1fr;gap:22px}
   .retail-tags{justify-content:flex-start}
 }
+
+
+/* V0.7.5 — footer harmonise avec le haut de page */
+footer,
+.footer,
+.site-footer{
+  background:linear-gradient(135deg,#fffdf9 0%,#f6efe8 100%) !important;
+  color:var(--ink) !important;
+  border-top:1px solid var(--line) !important;
+}
+footer a,
+.footer a,
+.site-footer a{
+  color:var(--ink) !important;
+}
+footer .eyebrow,
+.footer .eyebrow,
+.site-footer .eyebrow{
+  color:var(--wine) !important;
+  opacity:1 !important;
+}
+
+
+/* V0.7.6 — footer light theme complet */
+footer,
+.footer,
+.site-footer,
+.end-section,
+.end,
+.join-tribu,
+.social-footer{
+  background:linear-gradient(135deg,#fffdf9 0%,#f6efe8 100%) !important;
+  color:var(--ink) !important;
+  border-top:1px solid var(--line) !important;
+}
+
+footer *,
+.footer *,
+.site-footer *,
+.end-section *,
+.end *,
+.join-tribu *,
+.social-footer *{
+  color:var(--ink) !important;
+}
+
+footer .eyebrow,
+.footer .eyebrow,
+.site-footer .eyebrow,
+.end-section .eyebrow,
+.end .eyebrow,
+.join-tribu .eyebrow,
+.social-footer .eyebrow{
+  color:var(--wine) !important;
+  opacity:1 !important;
+}
+
+footer a,
+.footer a,
+.site-footer a,
+.end-section a,
+.end a,
+.join-tribu a,
+.social-footer a{
+  color:var(--ink) !important;
+  text-decoration:none;
+}
+
+footer a:hover,
+.footer a:hover,
+.site-footer a:hover,
+.end-section a:hover,
+.end a:hover,
+.join-tribu a:hover,
+.social-footer a:hover{
+  color:var(--wine) !important;
+}
+
+footer h1, footer h2, footer h3,
+.footer h1, .footer h2, .footer h3,
+.site-footer h1, .site-footer h2, .site-footer h3,
+.end-section h1, .end-section h2, .end-section h3,
+.end h1, .end h2, .end h3,
+.join-tribu h1, .join-tribu h2, .join-tribu h3,
+.social-footer h1, .social-footer h2, .social-footer h3{
+  color:var(--ink) !important;
+}
