@@ -1,19 +1,12 @@
-# Lalittletribu — Wholesale Showroom V0.6
+# Lalittletribu — Wholesale Showroom V0.7
 
-MVP orienté acquisition B2B / revendeurs.
+MVP orienté revendeurs / concept stores.
 
-## Parcours
-La marque → Collaborer → Collection Shopify → Ma sélection → Qualification du projet → Contact.
-
-## Principes
-- catalogue « Nouveautés » chargé depuis Shopify quand disponible ;
-- navigation libre sans identification préalable ;
-- prix affiché = prix public conseillé, jamais un tarif wholesale ;
-- sélection variantes + quantités ;
-- identification uniquement au moment de présenter la sélection ;
-- qualification : distribution / atelier-événement / collaboration / autre ;
-- liens vers l'histoire Lalittletribu, les ateliers, Instagram, le site et le contact professionnel ;
-- conservation UTM / `src` pour préparer les usages QR code / salons / prospection.
-
-## Important
-Cette version reste une démonstration : la sélection finale est stockée localement dans le navigateur. Aucun lead, commande ou paiement n'est réellement transmis. Aucun MOQ, tarif revendeur ou délai commercial n'est inventé.
+## V0.7
+- Présentation de marque synthétisée directement dans le showroom, sans sortie vers la page « Notre histoire ».
+- Lecture concept-store : bijoux & accessoires, personnalisation, accumulation, cadeau, symboles, création en France, ateliers en boutique.
+- Bloc « Un univers identifiable en boutique ».
+- Aucun lien externe au milieu du funnel ; les prolongements externes restent en fin de page.
+- Catalogue Nouveautés chargé depuis Shopify avec fallback local.
+- Sélection libre puis identification uniquement à la finalisation.
+- Démonstration : aucune transmission réelle, commande ou paiement.
