@@ -38,3 +38,6 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}.desktop-nav{display:flex;ga
 .store-fit{margin-top:22px;padding-top:18px;border-top:1px solid rgba(0,0,0,.12)}
 .store-fit strong{display:block;margin-bottom:6px;font-size:1rem}
 .store-fit p{margin:0;max-width:620px}
+
+/* V0.7.2 — pistes MVP visibles mais non cliquables */
+.inactive-link{display:inline-block;margin-top:10px;font-size:.92rem;font-weight:600;opacity:.55;cursor:default;}
