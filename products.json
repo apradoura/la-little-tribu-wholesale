@@ -1,0 +1,129 @@
+[
+  {
+    "id": "coeur",
+    "name": "Bracelet C❤️EUR",
+    "public_price": "Dès 18 €",
+    "category": "Bracelets",
+    "variants": [
+      "Rose pâle",
+      "Parme",
+      "Jaune",
+      "Vert pâle",
+      "Bleu",
+      "Menthe",
+      "Crème",
+      "Orange",
+      "Bordeaux"
+    ]
+  },
+  {
+    "id": "maxi-leo",
+    "name": "Bracelet Maxi Coeur Léo",
+    "public_price": "Dès 25 €",
+    "category": "Bracelets",
+    "variants": [
+      "Léo"
+    ]
+  },
+  {
+    "id": "maxi-coeur",
+    "name": "Bracelet MAXI C❤️EUR",
+    "public_price": "22 €",
+    "category": "Bracelets",
+    "variants": [
+      "Rouge",
+      "Bleu marine"
+    ]
+  },
+  {
+    "id": "st-benoit",
+    "name": "Collier Médaille Saint Benoit le protecteur",
+    "public_price": "Dès 29 €",
+    "category": "Colliers",
+    "variants": [
+      "Doré"
+    ]
+  },
+  {
+    "id": "iconique",
+    "name": "Collier Médaille en pierre naturelle - L'Iconique",
+    "public_price": "Dès 39 €",
+    "category": "Colliers",
+    "variants": [
+      "Pierre naturelle"
+    ]
+  },
+  {
+    "id": "pochette-bisous",
+    "name": "Pochette matelassée Bisous",
+    "public_price": "18 €",
+    "category": "Accessoires",
+    "variants": [
+      "Rouge",
+      "Crème",
+      "Bleu pâle"
+    ]
+  },
+  {
+    "id": "talisman",
+    "name": "Bracelet Talisman en Pierre Naturelle",
+    "public_price": "32 €",
+    "category": "Bracelets",
+    "variants": [
+      "Pierre naturelle"
+    ]
+  },
+  {
+    "id": "miraculeuse",
+    "name": "Médaille Miraculeuse colorée",
+    "public_price": "Dès 7 €",
+    "category": "Personnalisation",
+    "variants": [
+      "Jaune",
+      "Saumon",
+      "Orange",
+      "Bleu",
+      "Vert",
+      "Noir",
+      "Rose fluo",
+      "Violet"
+    ]
+  },
+  {
+    "id": "eclat",
+    "name": "Bracelet Éclat",
+    "public_price": "25 €",
+    "category": "Bracelets",
+    "variants": [
+      "Doré"
+    ]
+  },
+  {
+    "id": "croix",
+    "name": "Croix Pierres fines",
+    "public_price": "Dès 39 €",
+    "category": "Colliers",
+    "variants": [
+      "Pierres fines"
+    ]
+  },
+  {
+    "id": "coeur-enfant",
+    "name": "Bracelet CŒUR Enfant",
+    "public_price": "15 €",
+    "category": "Enfant",
+    "variants": [
+      "Rose",
+      "Bleu",
+      "Blanc",
+      "Noir",
+      "Jaune",
+      "Vert pâle",
+      "Beige",
+      "Violet",
+      "Rouge",
+      "Orange",
+      "Menthe"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+
+:root{--ink:#241b1d;--cream:#f7f1eb;--paper:#fffdfa;--wine:#6d2334;--line:#e8ddd4;--muted:#7d7271}
+*{box-sizing:border-box} body{margin:0;font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink)}
+button,input,select{font:inherit} button{cursor:pointer}
+.wrap{max-width:1180px;margin:auto;padding:0 24px}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,253,250,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:"Playfair Display";font-size:25px}.pill{border:1px solid var(--line);border-radius:999px;padding:10px 15px;background:white}
+.hero{min-height:72vh;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);font-weight:600}
+h1,h2,h3{font-family:"Playfair Display";line-height:1.05} h1{font-size:clamp(52px,7vw,92px);margin:14px 0 22px} h2{font-size:44px}
+.lead{font-size:20px;line-height:1.55;color:#54484a;max-width:640px}
+.hero-art{min-height:520px;border-radius:28px;background:
+radial-gradient(circle at 30% 35%,#ffd5df 0 8%,transparent 9%),
+radial-gradient(circle at 58% 60%,#dfd0ff 0 10%,transparent 11%),
+radial-gradient(circle at 75% 28%,#ffe69d 0 7%,transparent 8%),
+linear-gradient(135deg,#f2dcd2,#f9f4ef 55%,#d8c5c7);position:relative;overflow:hidden}
+.hero-art:after{content:"LLT";position:absolute;inset:auto 30px 20px auto;font:italic 92px "Playfair Display";color:rgba(109,35,52,.15)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border:0;border-radius:999px;padding:14px 20px;background:var(--wine);color:white;font-weight:600}.btn.secondary{background:white;color:var(--ink);border:1px solid var(--line)}
+.band{background:var(--cream);padding:72px 0}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:white;border:1px solid var(--line);border-radius:22px;padding:24px}
+.modal{position:fixed;inset:0;background:rgba(30,20,22,.55);display:grid;place-items:center;padding:20px;z-index:50}.modal-card{width:min(620px,100%);background:white;border-radius:26px;padding:28px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field input,.field select{border:1px solid var(--line);border-radius:12px;padding:12px}.tiny{font-size:12px;color:var(--muted);line-height:1.5}
+.shop-head{padding:48px 0 24px;display:flex;justify-content:space-between;align-items:end;gap:20px}.filters{display:flex;gap:8px;flex-wrap:wrap}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:100px}.product{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:white}.visual{aspect-ratio:1/1;background:linear-gradient(135deg,#f6e5df,#f8f4ed);display:grid;place-items:center;font:italic 58px "Playfair Display";color:rgba(109,35,52,.26)}.info{padding:18px}.info h3{font-size:24px;margin:8px 0}.meta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px}.product select,.product input{width:100%;margin-top:10px;padding:10px;border:1px solid var(--line);border-radius:10px}
+.selectbar{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);width:min(900px,calc(100% - 36px));background:var(--ink);color:white;border-radius:20px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;box-shadow:0 18px 60px rgba(0,0,0,.22);z-index:30}.selectbar button{background:white;color:var(--ink)}
+.drawer{position:fixed;inset:0 0 0 auto;width:min(520px,100%);background:white;z-index:60;box-shadow:-20px 0 70px rgba(0,0,0,.18);padding:26px;overflow:auto}.drawer .row{border-bottom:1px solid var(--line);padding:14px 0}.drawer-head{display:flex;justify-content:space-between;align-items:center}
+.edit{background:#fff8da;border:1px dashed #d3b959;border-radius:16px;padding:18px;margin:20px 0}.edit textarea{width:100%;min-height:90px;padding:10px}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding:55px 0}.hero-art{min-height:360px}.three,.products{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}}
+@media(max-width:560px){.three,.products{grid-template-columns:1fr}.nav .hide-mobile{display:none}h2{font-size:36px}}
