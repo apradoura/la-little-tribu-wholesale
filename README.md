@@ -1,17 +1,13 @@
-# La Little Tribu — Espace Pro V0.8
+# La Little Tribu — Wholesale V0.8.2
 
-Version de validation inspirée du book professionnel de Barbara.
+Correctif issu de l’audit UX mobile de la V0.8.1.
 
-## Changements V0.8
-- Couverture : visuel original fourni par Barbara, utilisé en première page.
-- Discours de marque repris : « Des bijoux joyeux, personnels et porte-bonheur » et texte de présentation Boulogne-Billancourt.
-- Bloc « Les pièces iconiques » avec cartouches rectangulaires arrondis : Iconique, Maxi cœur, Médailles & pierres, Croix, Grigris.
-- Bloc « Travaillons ensemble » : commande professionnelle, personnalisation, assortiment/réassort, animation boutique.
-- Catalogue « Nouveautés » toujours chargé en direct depuis Shopify avec fallback local.
-- Sélection, variantes, quantités et identification uniquement à la finalisation conservées.
-- Aucun tarif wholesale inventé ou exposé publiquement.
+- couverture originale de Barbara conservée sans CTA graphique ajouté ;
+- le bouton déjà présent dans l’image est rendu cliquable par une zone transparente ;
+- cartouches « Iconique / Maxi cœur / Médailles & pierres / Croix / Grigris » textuels, sans photos arbitraires ;
+- header mobile resserré ;
+- navigation, filtres, quick-view, ajout à la sélection, quantités et finalisation conservés ;
+- catalogue Shopify live conservé, avec fallback local ;
+- aucun tarif wholesale fictif ajouté.
 
-## Déploiement GitHub Pages
-Remplacer les fichiers du dépôt par : index.html, styles.css, app.js, products.json, hero-barbara.jpeg et README.md.
-
-Cette version reste un MVP : la demande finale est enregistrée localement dans le navigateur et n'est pas encore transmise à Barbara.
+Remplacer à la racine du repo les 6 fichiers de cette archive.
