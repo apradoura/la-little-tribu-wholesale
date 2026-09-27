@@ -181,3 +181,25 @@ footer h1, footer h2, footer h3,
   color:var(--wine) !important;
   opacity:1 !important;
 }
+
+/* V0.8 — univers Barbara / book pro */
+:root{--paper:#fffaf4;--cream:#f7efe6;--pink:#ee8eaa;--pink-deep:#d86f90;--ink:#292329;--line:#eadfd6;--wine:#b85b76}
+body{background:var(--paper)}
+.barbara-cover{position:relative;width:100%;background:#eadfd6;display:flex;justify-content:center;overflow:hidden}
+.barbara-cover img{width:100%;max-height:88vh;object-fit:cover;object-position:center 48%;display:block}
+.cover-action{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);background:var(--pink);color:#fff;text-decoration:none;border-radius:999px;padding:13px 22px;font-size:12px;font-weight:700;letter-spacing:.04em;box-shadow:0 10px 30px rgba(76,30,45,.15)}
+.brand-intro{padding:76px 0;background:#fffaf4;border-bottom:1px solid var(--line)}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end}
+.intro-grid h1{font-family:"DM Sans",sans-serif;font-weight:600;letter-spacing:-.045em;font-size:clamp(38px,5vw,68px);margin:10px 0 0;line-height:.98}
+.brand-copy{font-size:18px;line-height:1.65;max-width:580px}.brand-copy p{margin:0 0 16px}
+.signatures{padding-top:74px}.signature-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.signature-card{border:0;background:#f7e7da;border-radius:18px;overflow:hidden;padding:0;text-align:left;color:var(--ink);box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.signature-card img,.signature-placeholder{width:100%;aspect-ratio:.9/1;object-fit:cover;display:block;background:var(--cream)}
+.signature-card span{display:block;padding:14px 14px 16px;font-family:"Playfair Display",serif;font-size:19px}
+.pro-offer{padding:82px 0;background:#f4e8dd;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.offer-grid article{background:#fffaf4;border-radius:18px;padding:24px;min-height:230px;display:flex;flex-direction:column}.offer-grid article>span{font-size:11px;letter-spacing:.16em;color:var(--wine)}.offer-grid h3{font-family:"DM Sans",sans-serif;font-size:19px;margin:32px 0 10px}.offer-grid p{font-size:13px;line-height:1.55;color:#655a5c}.offer-grid a{margin-top:auto;color:var(--wine);font-size:12px;font-weight:700;text-decoration:none}
+.btn{background:var(--pink-deep)}.filters button.active{background:var(--pink-deep);border-color:var(--pink-deep)}
+.product{border-radius:18px}.card-actions .btn{border-radius:12px}.badge{background:rgba(255,250,244,.94)}
+.pro-footer{background:#fffaf4!important}
+@media(max-width:900px){.signature-grid{grid-template-columns:repeat(3,1fr)}.offer-grid{grid-template-columns:repeat(2,1fr)}.intro-grid{grid-template-columns:1fr;gap:26px}.barbara-cover img{max-height:none}}
+@media(max-width:600px){.barbara-cover img{width:100%;height:auto;object-fit:contain}.cover-action{bottom:14px;padding:10px 16px;font-size:10px}.brand-intro{padding:50px 0}.brand-copy{font-size:16px}.signature-grid{grid-template-columns:repeat(2,1fr);gap:9px}.signature-card span{font-size:16px;padding:11px}.offer-grid{grid-template-columns:1fr}.top{position:sticky}.desktop-nav{display:none}}

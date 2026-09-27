@@ -1,27 +1,17 @@
-# Lalittletribu — Wholesale Showroom V0.7
+# La Little Tribu — Espace Pro V0.8
 
-MVP orienté revendeurs / concept stores.
+Version de validation inspirée du book professionnel de Barbara.
 
-## V0.7
-- Présentation de marque synthétisée directement dans le showroom, sans sortie vers la page « Notre histoire ».
-- Lecture concept-store : bijoux & accessoires, personnalisation, accumulation, cadeau, symboles, création en France, ateliers en boutique.
-- Bloc « Un univers identifiable en boutique ».
-- Aucun lien externe au milieu du funnel ; les prolongements externes restent en fin de page.
-- Catalogue Nouveautés chargé depuis Shopify avec fallback local.
-- Sélection libre puis identification uniquement à la finalisation.
-- Démonstration : aucune transmission réelle, commande ou paiement.
+## Changements V0.8
+- Couverture : visuel original fourni par Barbara, utilisé en première page.
+- Discours de marque repris : « Des bijoux joyeux, personnels et porte-bonheur » et texte de présentation Boulogne-Billancourt.
+- Bloc « Les pièces iconiques » avec cartouches rectangulaires arrondis : Iconique, Maxi cœur, Médailles & pierres, Croix, Grigris.
+- Bloc « Travaillons ensemble » : commande professionnelle, personnalisation, assortiment/réassort, animation boutique.
+- Catalogue « Nouveautés » toujours chargé en direct depuis Shopify avec fallback local.
+- Sélection, variantes, quantités et identification uniquement à la finalisation conservées.
+- Aucun tarif wholesale inventé ou exposé publiquement.
 
+## Déploiement GitHub Pages
+Remplacer les fichiers du dépôt par : index.html, styles.css, app.js, products.json, hero-barbara.jpeg et README.md.
 
-V0.7.3 : ajout d'un repere concept-store avant la collection pour qualifier immediatement l'affinite revendeur, sans ajouter de nouvelle sortie externe.
-
-
-V0.7.4 : suppression des bandeaux noirs et harmonisation sur le fond clair creme/ivoire du haut de page.
-
-
-V0.7.5 : footer repasse sur le meme fond creme/ivoire que le hero et les bandeaux intermediaires.
-
-
-V0.7.6 : correction complete des couleurs du footer sur fond clair (titres, liens, texte secondaire).
-
-
-V0.7.7 : correction cible de `.pro-footer`, la vraie classe utilisée par le rendu.
+Cette version reste un MVP : la demande finale est enregistrée localement dans le navigateur et n'est pas encore transmise à Barbara.
