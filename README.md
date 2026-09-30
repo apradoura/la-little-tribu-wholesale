@@ -1,15 +1,12 @@
-# Lalittletribu — V0.9.10 DEV Gallery
+# Lalittletribu — V0.9.11 DEV Hover Gallery
 
-Base : V0.9.8 stable.
+Base : V0.9.10.
 
-Nouveauté :
-- récupération de toutes les images Shopify présentes sur chaque produit ;
-- galerie dans la quick view ;
-- image principale + miniatures horizontales ;
-- flèches précédent / suivant ;
-- compteur photo ;
-- responsive desktop/mobile ;
-- aucune image dupliquée ou uploadée localement : les médias restent servis depuis Shopify.
+Évolution UX :
+- carte produit = photo principale par défaut ;
+- desktop = deuxième photo Shopify au survol ;
+- badge discret indiquant le nombre total de photos ;
+- mobile = pas de hover, photo principale conservée pour ne pas perturber le scroll ;
+- clic/tap = galerie complète V0.9.10 avec miniatures, flèches et compteur.
 
-Cette version ne contient pas les sondes de diagnostic V0.9.9.
-Tester en DEV avant éventuel passage PROD.
+Tester en DEV avant passage PROD.
