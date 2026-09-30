@@ -10,3 +10,6 @@ Version de démonstration B2B.
 - Livraison offerte dès 500 € HT
 - Demande de commande uniquement : aucune transmission, facturation ou paiement réel dans cette version.
 - Prix publics, photos et variantes continuent à provenir de la collection Shopify live lorsqu’elle est accessible.
+
+
+V0.9.3 : le CTA de couverture « Collection & offre professionnelle » pointe désormais directement vers la section showroom / nouveautés.
