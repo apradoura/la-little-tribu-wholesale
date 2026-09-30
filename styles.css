@@ -750,55 +750,82 @@ img,svg,video,canvas{
 }
 
 
-/* V0.9.9b — diagnostic brut Shopify, DEV uniquement */
-.dev-raw-probe{
-  margin:12px 0 4px;
-  padding:14px;
-  border:1px dashed #b88996;
-  border-radius:14px;
-  background:#fff7fa;
-  color:#49383e;
-  font-size:12px;
-  line-height:1.45;
+/* V0.9.10 — galerie produit Shopify complète */
+.qv-modal{width:min(960px,100%)}
+.qv-gallery{min-width:0}
+.qv-main{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  background:var(--cream);
+  aspect-ratio:1/1.08;
 }
-.dev-raw-probe>strong{
+.qv-main-img{
   display:block;
-  margin-bottom:10px;
-  color:#842942;
-  font-size:12px;
-  letter-spacing:.04em;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
-.dev-raw-row{
+.qv-thumbs{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:10px 2px 3px;
+  scrollbar-width:thin;
+  scroll-snap-type:x proximity;
+}
+.qv-thumb{
+  flex:0 0 68px;
+  width:68px;
+  height:76px;
+  padding:0;
+  border:2px solid transparent;
+  border-radius:10px;
+  background:var(--cream);
+  overflow:hidden;
+  scroll-snap-align:start;
+}
+.qv-thumb img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.qv-thumb.active{
+  border-color:var(--wine);
+}
+.gallery-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.7);
+  background:rgba(255,255,255,.9);
+  color:var(--ink);
+  font:400 30px/1 Arial,sans-serif;
   display:grid;
-  grid-template-columns:minmax(135px,.7fr) minmax(0,1.3fr);
-  gap:10px;
-  padding:6px 0;
-  border-top:1px solid rgba(132,41,66,.09);
+  place-items:center;
+  box-shadow:0 4px 18px rgba(0,0,0,.12);
+  z-index:2;
 }
-.dev-raw-row span{font-weight:600}
-.dev-raw-row code{
-  white-space:normal;
-  overflow-wrap:anywhere;
+.gallery-arrow.prev{left:12px}
+.gallery-arrow.next{right:12px}
+.gallery-count{
+  position:absolute;
+  right:12px;
+  bottom:12px;
+  background:rgba(33,25,27,.76);
+  color:#fff;
+  border-radius:999px;
+  padding:6px 9px;
   font-size:11px;
-  background:#f2e6ec;
-  padding:3px 5px;
-  border-radius:5px;
+  line-height:1;
 }
-.dev-raw-probe p{
-  margin:10px 0 0;
-  font-size:10px;
-  opacity:.62;
+@media(max-width:760px){
+  .qv-modal{width:min(720px,100%)}
+  .qv-main{aspect-ratio:1/1.04}
+  .qv-thumb{flex-basis:62px;width:62px;height:68px}
+  .gallery-arrow{width:38px;height:38px}
 }
-@media(max-width:600px){
-  .dev-raw-row{grid-template-columns:1fr;gap:3px}
-}
-
-
-/* V0.9.9c — diagnostic forcé visible */
-.dev-raw-probe{margin:14px 0;padding:16px;border:3px solid #b42345;border-radius:14px;background:#fff3f6;color:#39272d;font-size:12px;line-height:1.45}
-.dev-raw-probe>strong{display:block;margin-bottom:12px;color:#9a1737;font-size:14px;letter-spacing:.03em}
-.dev-raw-row{display:grid;grid-template-columns:minmax(160px,.7fr) minmax(0,1.3fr);gap:10px;padding:7px 0;border-top:1px solid rgba(132,41,66,.12)}
-.dev-raw-row span{font-weight:700}.dev-raw-row code{white-space:normal;overflow-wrap:anywhere;font-size:11px;background:#f4e3e8;padding:4px 6px;border-radius:5px}
-.dev-json{margin-top:12px}.dev-json summary{cursor:pointer;font-weight:700;color:#842942}.dev-json pre{max-height:320px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#261d20;color:#fff;padding:12px;border-radius:10px;font-size:10px}
-.dev-build-badge{position:fixed;left:12px;bottom:12px;z-index:99999;background:#9a1737;color:white;padding:8px 11px;border-radius:999px;font:700 11px/1.2 Arial,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.2);pointer-events:none}
-@media(max-width:600px){.dev-raw-row{grid-template-columns:1fr;gap:3px}.dev-build-badge{font-size:9px;left:8px;bottom:8px}}

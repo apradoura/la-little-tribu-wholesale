@@ -1,11 +1,15 @@
-# Lalittletribu V0.9.9c — Diagnostic Shopify forcé
+# Lalittletribu — V0.9.10 DEV Gallery
 
-Version DEV uniquement.
+Base : V0.9.8 stable.
 
-- Badge fixe « DEV · V0.9.9c DIAGNOSTIC » visible en bas à gauche.
-- Bloc diagnostic affiché dans TOUTES les quick views, sans filtrage par nom de produit.
-- Liste des clés réellement reçues de Shopify.
-- vendor, product_type, tags, options, variantes, disponibilité, inventory_quantity, sku.
-- Objet Shopify brut consultable via un volet repliable.
+Nouveauté :
+- récupération de toutes les images Shopify présentes sur chaque produit ;
+- galerie dans la quick view ;
+- image principale + miniatures horizontales ;
+- flèches précédent / suivant ;
+- compteur photo ;
+- responsive desktop/mobile ;
+- aucune image dupliquée ou uploadée localement : les médias restent servis depuis Shopify.
 
-NE PAS DEPLOYER EN PROD.
+Cette version ne contient pas les sondes de diagnostic V0.9.9.
+Tester en DEV avant éventuel passage PROD.

@@ -14,39 +14,12 @@ function shippingLabel(ht){return ht>=FREE_SHIPPING_HT?"Offerte":money(SHIPPING_
 function thresholdText(ht){if(ht<ORDER_MIN_HT)return `Encore <strong>${money(ORDER_MIN_HT-ht)} HT</strong> pour atteindre le minimum de commande.`;if(ht<FREE_SHIPPING_HT)return `Minimum atteint · encore <strong>${money(FREE_SHIPPING_HT-ht)} HT</strong> pour bénéficier de la livraison offerte.`;return `<strong>Minimum atteint · livraison offerte.</strong>`}
 function track(type,payload={}){const k="llt_events_v092",e=JSON.parse(localStorage.getItem(k)||"[]");e.push({type,at:new Date().toISOString(),...campaign,...payload});localStorage.setItem(k,JSON.stringify(e))}
 function category(t){t=t.toLowerCase();if(t.includes("bracelet"))return"Bracelets";if(t.includes("collier")||t.includes("croix"))return"Colliers";if(t.includes("pochette"))return"Accessoires";if(t.includes("médaille")||t.includes("medaille"))return"Pendentifs";return"Nouveautés"}
-function normalize(p){const prices=(p.variants||[]).map(v=>Number(v.price||0)).filter(n=>!Number.isNaN(n));const min=prices.length?Math.min(...prices):0,max=prices.length?Math.max(...prices):min;return{id:String(p.id),name:p.title,price:(min!==max?"Dès ":"")+money(min),category:category(p.title),source:`https://lalittletribu.fr/products/${p.handle}`,variants:(p.variants||[]).map(v=>v.title).filter(v=>v&&v!=="Default Title"),note:"Nouveauté Lalittletribu",image:p.images?.[0]?.src||p.image?.src||null,raw:p}}
+function normalize(p){const prices=(p.variants||[]).map(v=>Number(v.price||0)).filter(n=>!Number.isNaN(n));const min=prices.length?Math.min(...prices):0,max=prices.length?Math.max(...prices):min;const gallery=(p.images||[]).map(x=>x?.src).filter(Boolean);const main=p.image?.src||gallery[0]||null;return{id:String(p.id),name:p.title,price:(min!==max?"Dès ":"")+money(min),category:category(p.title),source:`https://lalittletribu.fr/products/${p.handle}`,variants:(p.variants||[]).map(v=>v.title).filter(v=>v&&v!=="Default Title"),note:"Nouveauté Lalittletribu",image:main,gallery:gallery.length?gallery:(main?[main]:[])}}
 async function load(){try{const r=await fetch(SHOPIFY_COLLECTION,{mode:"cors",cache:"no-store"});if(!r.ok)throw 0;const d=await r.json();state.products=(d.products||[]).map(normalize);state.source="shopify-live"}catch(e){state.products=await fetch("products.json?v=092").then(r=>r.json());state.source="fallback"}}
 function product(id){return state.products.find(p=>String(p.id)===String(id))}
-
-function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]))}
-function devRawProbe(p){
-  const r=p.raw||{};
-  const keys=Object.keys(r);
-  const first=(r.variants||[])[0]||{};
-  const rows=[
-    ["VERSION DIAG","V0.9.9c"],
-    ["Produit normalisé",p.name],
-    ["ID",r.id??p.id],
-    ["Clés produit reçues",keys.length?keys.join(", "):"Aucune"],
-    ["title",r.title],
-    ["handle",r.handle],
-    ["vendor",r.vendor],
-    ["product_type",r.product_type],
-    ["tags",Array.isArray(r.tags)?r.tags.join(" · "):r.tags],
-    ["options",Array.isArray(r.options)?r.options.map(o=>typeof o==="string"?o:(o?.name||JSON.stringify(o))).join(" · "):r.options],
-    ["variants (nb)",Array.isArray(r.variants)?r.variants.length:""],
-    ["images (nb)",Array.isArray(r.images)?r.images.length:""],
-    ["1re variante — clés",Object.keys(first).join(", ")],
-    ["1re variante — titre",first.title],
-    ["1re variante — prix",first.price],
-    ["1re variante — disponibilité",first.available],
-    ["1re variante — inventory_quantity",first.inventory_quantity],
-    ["1re variante — sku",first.sku],
-    ["Couche PRO actuelle",proPriceFor(p)!=null?money(proPriceFor(p))+" HT":"Aucun prix pro reconnu"]
-  ];
-  return `<div class="dev-raw-probe"><strong>DIAGNOSTIC DEV · Shopify brut · V0.9.9c</strong>${rows.map(([k,v])=>`<div class="dev-raw-row"><span>${esc(k)}</span><code>${v===undefined||v===null||v===""?"—":esc(v)}</code></div>`).join("")}<details class="dev-json"><summary>Voir l'objet Shopify brut</summary><pre>${esc(JSON.stringify(r,null,2))}</pre></details><p>Version temporaire de diagnostic. Ne pas déployer en production.</p></div>`;
-}
-function quickView(id){const p=product(id),opts=(p.variants?.length?p.variants:["Standard"]).map(v=>`<option>${v}</option>`).join("");document.body.insertAdjacentHTML("beforeend",`<div class="modal" onclick="if(event.target===this)this.remove()"><div class="modal-card"><button class="modal-close" type="button" aria-label="Fermer" onclick="this.closest('.modal').remove()">×</button><div class="qv"><div class="qv-media">${p.image?`<img src="${p.image}" alt="">`:""}</div><div class="qv-info"><div class="eyebrow">${p.category}</div><h2>${p.name}</h2><div><span class="price-label">Prix public conseillé TTC</span><strong>${p.price}</strong></div>${proPriceFor(p)!=null?`<div class="pro-price"><span class="price-label">Prix professionnel</span><strong>${money(proPriceFor(p))} HT / unité</strong></div>`:`<div class="pro-unavailable">Tarif professionnel à confirmer — référence non commandable pour le moment.</div>`}<div class="qv-note">${p.note||""}</div>${devRawProbe(p)}<label class="field">Variante<select name="variant">${opts}</select></label><label class="field">Quantité<input name="qty" type="number" min="1" value="1"></label><button class="btn" ${proPriceFor(p)==null?"disabled":""} onclick="addFromModal('${p.id}',this)">${proPriceFor(p)==null?"Tarif pro à confirmer":"Ajouter à ma sélection"}</button><button class="pill" onclick="this.closest('.modal').remove()">Continuer mes choix</button></div></div></div></div>`);track("quick_view",{product:id})}
+function quickView(id){const p=product(id),opts=(p.variants?.length?p.variants:["Standard"]).map(v=>`<option>${v}</option>`).join(""),gallery=(p.gallery?.length?p.gallery:(p.image?[p.image]:[])),thumbs=gallery.map((src,i)=>`<button type="button" class="qv-thumb ${i===0?"active":""}" data-src="${src}" data-index="${i}" onclick="gallerySelect(this)" aria-label="Voir la photo ${i+1}"><img src="${src}" alt="" loading="lazy"></button>`).join("");document.body.insertAdjacentHTML("beforeend",`<div class="modal" onclick="if(event.target===this)this.remove()"><div class="modal-card qv-modal"><button class="modal-close" type="button" aria-label="Fermer" onclick="this.closest('.modal').remove()">×</button><div class="qv"><div class="qv-gallery">${gallery.length?`<div class="qv-main"><img class="qv-main-img" src="${gallery[0]}" alt="${p.name}" data-index="0">${gallery.length>1?`<button type="button" class="gallery-arrow prev" onclick="galleryStep(this,-1)" aria-label="Photo précédente">‹</button><button type="button" class="gallery-arrow next" onclick="galleryStep(this,1)" aria-label="Photo suivante">›</button><div class="gallery-count">1 / ${gallery.length}</div>`:""}</div>${gallery.length>1?`<div class="qv-thumbs">${thumbs}</div>`:""}`:""}</div><div class="qv-info"><div class="eyebrow">${p.category}</div><h2>${p.name}</h2><div><span class="price-label">Prix public conseillé TTC</span><strong>${p.price}</strong></div>${proPriceFor(p)!=null?`<div class="pro-price"><span class="price-label">Prix professionnel</span><strong>${money(proPriceFor(p))} HT / unité</strong></div>`:`<div class="pro-unavailable">Tarif professionnel à confirmer — référence non commandable pour le moment.</div>`}<div class="qv-note">${p.note||""}</div><label class="field">Variante<select name="variant">${opts}</select></label><label class="field">Quantité<input name="qty" type="number" min="1" value="1"></label><button class="btn" ${proPriceFor(p)==null?"disabled":""} onclick="addFromModal('${p.id}',this)">${proPriceFor(p)==null?"Tarif pro à confirmer":"Ajouter à ma sélection"}</button><button class="pill" onclick="this.closest('.modal').remove()">Continuer mes choix</button></div></div></div></div>`);track("quick_view",{product:id})}
+function gallerySelect(btn){const modal=btn.closest(".modal"),main=modal.querySelector(".qv-main-img"),idx=Number(btn.dataset.index||0);if(!main)return;main.src=btn.dataset.src;main.dataset.index=String(idx);modal.querySelectorAll(".qv-thumb").forEach(x=>x.classList.toggle("active",x===btn));const count=modal.querySelector(".gallery-count");if(count)count.textContent=`${idx+1} / ${modal.querySelectorAll(".qv-thumb").length}`}
+function galleryStep(btn,delta){const modal=btn.closest(".modal"),thumbs=[...modal.querySelectorAll(".qv-thumb")],main=modal.querySelector(".qv-main-img");if(!thumbs.length||!main)return;const current=Number(main.dataset.index||0),next=(current+delta+thumbs.length)%thumbs.length;gallerySelect(thumbs[next]);thumbs[next].scrollIntoView({behavior:"smooth",block:"nearest",inline:"center"})}
 function addFromModal(id,btn){const m=btn.closest(".modal"),p=product(id),v=m.querySelector("[name=variant]").value,q=Number(m.querySelector("[name=qty]").value||1);add(p,v,q);m.remove()}
 function quickAdd(id){const p=product(id);if(proPriceFor(p)==null)return;const v=(p.variants&&p.variants[0])||"Standard";add(p,v,1)}
 function add(p,v,q){const x=state.selection.find(s=>String(s.id)===String(p.id)&&s.variant===v);if(x)x.qty+=q;else state.selection.push({id:p.id,name:p.name,variant:v,qty:q,price:p.price,proPrice:proPriceFor(p),image:p.image||""});save();track("add_to_selection",{product:p.id,variant:v,qty:q});render()}
@@ -108,4 +81,3 @@ document.addEventListener("keydown",e=>{
     document.querySelector(".drawer")?.remove();
   }
 });
-\nif(location.hostname.includes("apradoura.github.io")){document.addEventListener("DOMContentLoaded",()=>{const b=document.createElement("div");b.className="dev-build-badge";b.textContent="DEV · V0.9.9c DIAGNOSTIC";document.body.appendChild(b)})}\n
