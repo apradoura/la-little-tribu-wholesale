@@ -1,15 +1,9 @@
-# La Little Tribu — V0.9 Lookbook interactif
+# La Little Tribu — Wholesale V0.9.1
 
-Version structurée à partir du book professionnel de Barbara.
+Correctif UX de la V0.9 Lookbook.
 
-- Couverture originale et CTA renforcé.
-- Textes du book repris fidèlement : univers, ADN, Les Cœurs, L’Iconique, Maxi Cœur, Médailles & pierres, Offre boutique, personnalisation, Maison Paulette, Travaillons ensemble et Contact.
-- Structure lookbook adaptée au web, puis catalogue Shopify « Nouveautés » live.
-- Sélection, variantes, quantités et qualification finale conservées.
-- Intérêt Bar à bijoux / événements / format sur mesure relié au formulaire final.
-- « Déjà revendeur ? » conservé comme prochaine étape, sans faux accès actif.
-- Footer avec pictogrammes de plateformes, sans emoji.
-- Responsive téléphone / tablette / desktop.
-- Grille de tarifs professionnels 2026 volontairement reportée à la version suivante conformément à l’arbitrage produit.
-
-Remplacer à la racine du repo tous les fichiers de cette archive.
+- contenu éditorial du PDF conservé ;
+- croix de fermeture visible sur les fiches produits, le formulaire « Je suis intéressé(e) » et les autres fenêtres ;
+- clic sur le fond grisé ferme également une modale ;
+- touche Échap ferme modale ou sélection sur ordinateur ;
+- aucune modification des tarifs/conditions professionnels : ils restent réservés à la prochaine version.
