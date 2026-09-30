@@ -18,3 +18,6 @@ V0.9.3 : le CTA de couverture « Collection & offre professionnelle » pointe d�
 V0.9.4 : suppression des badges « Nouveauté » sur les cartes et de la mention « collection Shopify à jour ».
 
 V0.9.5 : correction desktop de la couverture Barbara. L’image est désormais affichée intégralement, centrée, sans crop ni zoom destructif. Mobile inchangé.
+
+
+V0.9.6 : audit responsive desktop. Suppression des badges Nouveauté et de la mention collection Shopify à jour. Couverture Barbara affichée comme une vraie page lookbook sans crop, CTA recalé sur le bouton original. Mobile conservé.
