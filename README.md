@@ -1,11 +1,11 @@
-# Lalittletribu — V0.9.9b DEV Raw Shopify Probe
+# Lalittletribu V0.9.9c — Diagnostic Shopify forcé
 
-Version de diagnostic temporaire, basée sur V0.9.8.
+Version DEV uniquement.
 
-But :
-- afficher, sur l'environnement DEV uniquement, les champs réellement reçus du flux Shopify public ;
-- cibler les produits Maxi Cœur ;
-- comparer données Shopify et couche prix PRO actuelle ;
-- voir notamment si vendor, product_type, tags, options, disponibilité ou inventory_quantity sont présents.
+- Badge fixe « DEV · V0.9.9c DIAGNOSTIC » visible en bas à gauche.
+- Bloc diagnostic affiché dans TOUTES les quick views, sans filtrage par nom de produit.
+- Liste des clés réellement reçues de Shopify.
+- vendor, product_type, tags, options, variantes, disponibilité, inventory_quantity, sku.
+- Objet Shopify brut consultable via un volet repliable.
 
-Ne pas déployer cette version en production.
+NE PAS DEPLOYER EN PROD.

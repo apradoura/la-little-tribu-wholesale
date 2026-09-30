@@ -20,29 +20,31 @@ function product(id){return state.products.find(p=>String(p.id)===String(id))}
 
 function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]))}
 function devRawProbe(p){
-  if(!location.hostname.startsWith("apradoura.github.io"))return "";
-  const n=keyName(p?.name);
-  if(!(n.includes("maxi")&&n.includes("coeur")))return "";
   const r=p.raw||{};
   const keys=Object.keys(r);
   const first=(r.variants||[])[0]||{};
   const rows=[
+    ["VERSION DIAG","V0.9.9c"],
+    ["Produit normalisé",p.name],
+    ["ID",r.id??p.id],
     ["Clés produit reçues",keys.length?keys.join(", "):"Aucune"],
+    ["title",r.title],
+    ["handle",r.handle],
     ["vendor",r.vendor],
     ["product_type",r.product_type],
     ["tags",Array.isArray(r.tags)?r.tags.join(" · "):r.tags],
     ["options",Array.isArray(r.options)?r.options.map(o=>typeof o==="string"?o:(o?.name||JSON.stringify(o))).join(" · "):r.options],
-    ["handle",r.handle],
     ["variants (nb)",Array.isArray(r.variants)?r.variants.length:""],
     ["images (nb)",Array.isArray(r.images)?r.images.length:""],
     ["1re variante — clés",Object.keys(first).join(", ")],
     ["1re variante — titre",first.title],
     ["1re variante — prix",first.price],
     ["1re variante — disponibilité",first.available],
-    ["1re variante — stock",first.inventory_quantity],
+    ["1re variante — inventory_quantity",first.inventory_quantity],
+    ["1re variante — sku",first.sku],
     ["Couche PRO actuelle",proPriceFor(p)!=null?money(proPriceFor(p))+" HT":"Aucun prix pro reconnu"]
   ];
-  return `<div class="dev-raw-probe"><strong>DEV · Données Shopify réellement reçues</strong>${rows.map(([k,v])=>`<div class="dev-raw-row"><span>${esc(k)}</span><code>${v===undefined||v===null||v===""?"—":esc(v)}</code></div>`).join("")}<p>Diagnostic DEV uniquement. Rien de ce bloc n'est publié sur l'espace Lalittletribu.</p></div>`;
+  return `<div class="dev-raw-probe"><strong>DIAGNOSTIC DEV · Shopify brut · V0.9.9c</strong>${rows.map(([k,v])=>`<div class="dev-raw-row"><span>${esc(k)}</span><code>${v===undefined||v===null||v===""?"—":esc(v)}</code></div>`).join("")}<details class="dev-json"><summary>Voir l'objet Shopify brut</summary><pre>${esc(JSON.stringify(r,null,2))}</pre></details><p>Version temporaire de diagnostic. Ne pas déployer en production.</p></div>`;
 }
 function quickView(id){const p=product(id),opts=(p.variants?.length?p.variants:["Standard"]).map(v=>`<option>${v}</option>`).join("");document.body.insertAdjacentHTML("beforeend",`<div class="modal" onclick="if(event.target===this)this.remove()"><div class="modal-card"><button class="modal-close" type="button" aria-label="Fermer" onclick="this.closest('.modal').remove()">×</button><div class="qv"><div class="qv-media">${p.image?`<img src="${p.image}" alt="">`:""}</div><div class="qv-info"><div class="eyebrow">${p.category}</div><h2>${p.name}</h2><div><span class="price-label">Prix public conseillé TTC</span><strong>${p.price}</strong></div>${proPriceFor(p)!=null?`<div class="pro-price"><span class="price-label">Prix professionnel</span><strong>${money(proPriceFor(p))} HT / unité</strong></div>`:`<div class="pro-unavailable">Tarif professionnel à confirmer — référence non commandable pour le moment.</div>`}<div class="qv-note">${p.note||""}</div>${devRawProbe(p)}<label class="field">Variante<select name="variant">${opts}</select></label><label class="field">Quantité<input name="qty" type="number" min="1" value="1"></label><button class="btn" ${proPriceFor(p)==null?"disabled":""} onclick="addFromModal('${p.id}',this)">${proPriceFor(p)==null?"Tarif pro à confirmer":"Ajouter à ma sélection"}</button><button class="pill" onclick="this.closest('.modal').remove()">Continuer mes choix</button></div></div></div></div>`);track("quick_view",{product:id})}
 function addFromModal(id,btn){const m=btn.closest(".modal"),p=product(id),v=m.querySelector("[name=variant]").value,q=Number(m.querySelector("[name=qty]").value||1);add(p,v,q);m.remove()}
@@ -106,3 +108,4 @@ document.addEventListener("keydown",e=>{
     document.querySelector(".drawer")?.remove();
   }
 });
+\nif(location.hostname.includes("apradoura.github.io")){document.addEventListener("DOMContentLoaded",()=>{const b=document.createElement("div");b.className="dev-build-badge";b.textContent="DEV · V0.9.9c DIAGNOSTIC";document.body.appendChild(b)})}\n

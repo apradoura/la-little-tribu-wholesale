@@ -792,3 +792,13 @@ img,svg,video,canvas{
 @media(max-width:600px){
   .dev-raw-row{grid-template-columns:1fr;gap:3px}
 }
+
+
+/* V0.9.9c — diagnostic forcé visible */
+.dev-raw-probe{margin:14px 0;padding:16px;border:3px solid #b42345;border-radius:14px;background:#fff3f6;color:#39272d;font-size:12px;line-height:1.45}
+.dev-raw-probe>strong{display:block;margin-bottom:12px;color:#9a1737;font-size:14px;letter-spacing:.03em}
+.dev-raw-row{display:grid;grid-template-columns:minmax(160px,.7fr) minmax(0,1.3fr);gap:10px;padding:7px 0;border-top:1px solid rgba(132,41,66,.12)}
+.dev-raw-row span{font-weight:700}.dev-raw-row code{white-space:normal;overflow-wrap:anywhere;font-size:11px;background:#f4e3e8;padding:4px 6px;border-radius:5px}
+.dev-json{margin-top:12px}.dev-json summary{cursor:pointer;font-weight:700;color:#842942}.dev-json pre{max-height:320px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#261d20;color:#fff;padding:12px;border-radius:10px;font-size:10px}
+.dev-build-badge{position:fixed;left:12px;bottom:12px;z-index:99999;background:#9a1737;color:white;padding:8px 11px;border-radius:999px;font:700 11px/1.2 Arial,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.2);pointer-events:none}
+@media(max-width:600px){.dev-raw-row{grid-template-columns:1fr;gap:3px}.dev-build-badge{font-size:9px;left:8px;bottom:8px}}
