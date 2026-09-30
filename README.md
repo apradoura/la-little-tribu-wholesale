@@ -1,12 +1,11 @@
-# Lalittletribu — V0.9.9 DEV Tag Probe
+# Lalittletribu — V0.9.9b DEV Raw Shopify Probe
 
-Version de diagnostic temporaire.
+Version de diagnostic temporaire, basée sur V0.9.8.
 
-Objectif :
-- vérifier si le flux Shopify public actuellement utilisé remonte le champ `tags`;
-- le diagnostic n’apparaît QUE sur l’environnement DEV `apradoura.github.io`;
-- il s’affiche dans la fiche rapide du produit Saint Benoît ;
-- si des tags sont exposés, ils sont listés ;
-- sinon le message « Aucun tag remonté par le flux Shopify actuel » apparaît.
+But :
+- afficher, sur l'environnement DEV uniquement, les champs réellement reçus du flux Shopify public ;
+- cibler les produits Maxi Cœur ;
+- comparer données Shopify et couche prix PRO actuelle ;
+- voir notamment si vendor, product_type, tags, options, disponibilité ou inventory_quantity sont présents.
 
-Ne pas déployer cette version en PROD.
+Ne pas déployer cette version en production.
