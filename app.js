@@ -37,7 +37,20 @@ function render(){
  document.querySelector("#app").innerHTML=`
  <header class="top top-hidden" id="siteHeader"><div class="wrap nav"><div class="brand"><img class="logo-img" src="${LOGO_URL}" alt="La Little Tribu"><span class="wholesale">ESPACE PRO</span></div><nav class="desktop-nav"><a href="#univers">L'univers</a><a href="#signatures">Les signatures</a><a href="#showroom">Nouveautés</a><a href="#personnalisation">Personnalisation</a></nav><div class="nav-actions"><button class="retailer-link" disabled title="Disponible dans une prochaine version">Déjà revendeur ?</button><button class="pill selection-nav" onclick="openSelection()">Ma sélection (${count})</button></div></div></header>
  <main>
-  <section class="barbara-cover" id="cover"><img src="hero-barbara.jpeg" alt="La Little Tribu — Happy family concept store — Collection & offre professionnelle"><a class="cover-hotspot" href="#showroom"><span>COLLECTION &amp; OFFRE PROFESSIONNELLE</span></a></section>
+  <section class="barbara-cover" id="cover">
+    <div class="cover-mobile">
+      <img src="hero-barbara.jpeg" alt="La Little Tribu — Happy family concept store — Collection & offre professionnelle">
+      <a class="cover-hotspot" href="#showroom" aria-label="Découvrir la collection et l’offre professionnelle"><span>COLLECTION &amp; OFFRE PROFESSIONNELLE</span></a>
+    </div>
+    <div class="cover-desktop" aria-label="La Little Tribu — Happy family concept store">
+      <div class="cover-desktop-overlay"></div>
+      <div class="cover-desktop-content">
+        <div class="cover-desktop-brand">LA LITTLE TRIBU</div>
+        <div class="cover-desktop-sub">Happy family concept store</div>
+        <a class="cover-desktop-cta" href="#showroom">COLLECTION &amp; OFFRE PROFESSIONNELLE</a>
+      </div>
+    </div>
+  </section>
 
   <section id="univers" class="lookbook-section universe"><div class="wrap lookbook-grid"><div class="lookbook-copy"><div class="eyebrow">Notre univers</div><h1>Des bijoux joyeux,<br>personnels et porte-bonheur</h1><p>La Little Tribu imagine à Boulogne-Billancourt des bijoux colorés et personnalisables, pensés comme de petits cadeaux qui racontent une histoire.</p><p>Des pièces faciles à offrir, à collectionner et à assortir : bracelets Cœur, médailles miraculeuses, croix en pierres naturelles et grigris.</p><div class="adn"><span>ADN DE MARQUE</span><strong>Couleur • personnalisation • famille<br>Porte-bonheur • petites séries</strong></div></div><figure class="lookbook-image"><img src="lookbook-univers.jpeg" alt="Bijou La Little Tribu"></figure></div></section>
 

@@ -406,3 +406,125 @@ body{background:var(--paper)}
     transform:none!important;
   }
 }
+
+
+/* V0.9.7 — véritable hero desktop / mobile Barbara inchangé */
+.cover-mobile{display:block;position:relative}
+.cover-desktop{display:none}
+
+@media (min-width:901px){
+  .barbara-cover{
+    width:100%!important;
+    height:88vh!important;
+    min-height:680px!important;
+    max-height:920px!important;
+    margin:0!important;
+    background:#25191d!important;
+    overflow:hidden!important;
+    display:block!important;
+    position:relative!important;
+  }
+
+  .cover-mobile{display:none!important}
+
+  .cover-desktop{
+    display:block!important;
+    position:relative;
+    width:100%;
+    height:100%;
+    background-image:url("hero-barbara-desktop.jpeg");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+  }
+
+  .cover-desktop-overlay{
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(90deg,rgba(25,16,18,.56) 0%,rgba(25,16,18,.30) 34%,rgba(25,16,18,.06) 62%,rgba(25,16,18,.04) 100%),
+      linear-gradient(0deg,rgba(25,16,18,.18) 0%,rgba(25,16,18,0) 48%);
+    pointer-events:none;
+  }
+
+  .cover-desktop-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    max-width:1440px;
+    margin:0 auto;
+    padding:clamp(72px,9vh,110px) clamp(54px,6vw,100px) clamp(58px,8vh,92px);
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .cover-desktop-brand{
+    color:#fff;
+    font-family:"DM Sans",sans-serif;
+    font-size:clamp(38px,4.4vw,72px);
+    line-height:.98;
+    letter-spacing:.01em;
+    font-weight:700;
+  }
+
+  .cover-desktop-sub{
+    color:#fff;
+    margin-top:14px;
+    font-family:"DM Sans",sans-serif;
+    font-size:clamp(18px,1.55vw,27px);
+    font-weight:400;
+    letter-spacing:.01em;
+  }
+
+  .cover-desktop-cta{
+    margin-top:auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:min(480px,42vw);
+    min-height:66px;
+    padding:18px 34px;
+    border-radius:999px;
+    background:var(--barbara-pink);
+    color:#fff;
+    text-decoration:none;
+    font-family:"DM Sans",sans-serif;
+    font-size:clamp(13px,1vw,16px);
+    font-weight:700;
+    letter-spacing:.035em;
+    box-shadow:0 12px 30px rgba(49,17,29,.22);
+    transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;
+  }
+
+  .cover-desktop-cta:hover{
+    transform:translateY(-2px);
+    box-shadow:0 16px 34px rgba(49,17,29,.28);
+    filter:brightness(1.03);
+  }
+
+  .cover-desktop-cta:focus-visible{
+    outline:3px solid #fff;
+    outline-offset:4px;
+  }
+}
+
+@media (max-width:900px){
+  .cover-desktop{display:none!important}
+  .cover-mobile{display:block!important;position:relative}
+  .cover-mobile>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    object-fit:contain!important;
+  }
+  .cover-mobile .cover-hotspot{
+    left:7.86%!important;
+    bottom:7.22%!important;
+    width:49.49%!important;
+    height:4.32%!important;
+    min-height:40px!important;
+    transform:none!important;
+  }
+}
