@@ -13,3 +13,8 @@ Version de démonstration B2B.
 
 
 V0.9.3 : le CTA de couverture « Collection & offre professionnelle » pointe désormais directement vers la section showroom / nouveautés.
+
+
+V0.9.4 : suppression des badges « Nouveauté » sur les cartes et de la mention « collection Shopify à jour ».
+
+V0.9.5 : correction desktop de la couverture Barbara. L’image est désormais affichée intégralement, centrée, sans crop ni zoom destructif. Mobile inchangé.

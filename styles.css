@@ -295,3 +295,34 @@ body{background:var(--paper)}
 .product .btn[disabled],.qv-info .btn[disabled],.final-box .btn[disabled]{opacity:.38;cursor:not-allowed;filter:grayscale(.25)}
 .order-summary{margin-top:18px;padding:16px;border-radius:16px;background:rgba(255,255,255,.62);border:1px solid rgba(66,39,51,.12)}
 .order-line{display:flex;justify-content:space-between;gap:16px;padding:5px 0}.order-line.total{font-size:1.05rem;border-top:1px solid rgba(66,39,51,.12);margin-top:7px;padding-top:12px}.threshold{margin:10px 0 0;font-size:.82rem;line-height:1.4}.threshold.ok{font-weight:700}.sel-price{font-size:.82rem;margin-top:4px;font-weight:700}.conditions-mini{font-size:.76rem;line-height:1.45;opacity:.72;margin-top:10px}
+
+/* V0.9.5 — hero Barbara desktop : composition intégrale, zéro crop */
+@media (min-width: 901px){
+  .barbara-cover{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background:#f8f2eb;
+    overflow:visible;
+    padding:0;
+  }
+
+  .barbara-cover img{
+    display:block;
+    width:auto !important;
+    height:auto !important;
+    max-width:min(100%, 1120px) !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:center top !important;
+    margin:0 auto;
+  }
+
+  .cover-hotspot{
+    left:50% !important;
+    transform:translateX(-50%) !important;
+    width:min(50%, 560px) !important;
+    bottom:5.2% !important;
+    height:6.5% !important;
+  }
+}
