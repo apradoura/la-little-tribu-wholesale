@@ -287,3 +287,11 @@ body{background:var(--paper)}
 @media(max-width:600px){
   .modal-close{position:sticky;float:right;top:10px;right:10px;margin:0 0 -44px auto}
 }
+
+/* V0.9.2 — conditions professionnelles */
+.trade-conditions{margin:18px 0 26px;padding:18px 20px;border:1px solid rgba(66,39,51,.14);border-radius:18px;background:rgba(255,255,255,.48)}
+.trade-conditions strong{display:block;margin-bottom:8px}.trade-conditions-grid{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.92rem}.trade-conditions-grid span{white-space:nowrap}
+.pro-price{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;margin-top:7px}.pro-price .price-label{margin:0}.pro-price strong{font-size:1.05rem}.pro-unavailable{font-size:.78rem;opacity:.58;margin-top:7px}
+.product .btn[disabled],.qv-info .btn[disabled],.final-box .btn[disabled]{opacity:.38;cursor:not-allowed;filter:grayscale(.25)}
+.order-summary{margin-top:18px;padding:16px;border-radius:16px;background:rgba(255,255,255,.62);border:1px solid rgba(66,39,51,.12)}
+.order-line{display:flex;justify-content:space-between;gap:16px;padding:5px 0}.order-line.total{font-size:1.05rem;border-top:1px solid rgba(66,39,51,.12);margin-top:7px;padding-top:12px}.threshold{margin:10px 0 0;font-size:.82rem;line-height:1.4}.threshold.ok{font-weight:700}.sel-price{font-size:.82rem;margin-top:4px;font-weight:700}.conditions-mini{font-size:.76rem;line-height:1.45;opacity:.72;margin-top:10px}

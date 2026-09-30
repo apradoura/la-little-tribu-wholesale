@@ -1,9 +1,12 @@
-# La Little Tribu — Wholesale V0.9.1
+# Lalittletribu — V0.9.2 Prix & conditions
 
-Correctif UX de la V0.9 Lookbook.
+Version de démonstration B2B.
 
-- contenu éditorial du PDF conservé ;
-- croix de fermeture visible sur les fiches produits, le formulaire « Je suis intéressé(e) » et les autres fenêtres ;
-- clic sur le fond grisé ferme également une modale ;
-- touche Échap ferme modale ou sélection sur ordinateur ;
-- aucune modification des tarifs/conditions professionnels : ils restent réservés à la prochaine version.
+- Maxi Cœur : 10,00 € HT / unité
+- Bracelet Cœur : 11,50 € HT / unité
+- Aucun autre prix professionnel n’est déduit : les références sans tarif validé restent visibles mais non commandables.
+- Minimum de commande : 300 € HT
+- Colissimo France métropolitaine : 19 € TTC
+- Livraison offerte dès 500 € HT
+- Demande de commande uniquement : aucune transmission, facturation ou paiement réel dans cette version.
+- Prix publics, photos et variantes continuent à provenir de la collection Shopify live lorsqu’elle est accessible.
