@@ -1,0 +1,43 @@
+name: Deploy to production
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout DEV
+        uses: actions/checkout@v4
+        with:
+          path: dev
+
+      - name: Checkout PROD
+        uses: actions/checkout@v4
+        with:
+          repository: lalittletribu/lalittletribu.github.io
+          token: ${{ secrets.PROD_TOKEN }}
+          path: prod
+
+      - name: Copy validated DEV to PROD
+        run: |
+          rsync -av --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            dev/ prod/
+
+      - name: Publish production
+        run: |
+          cd prod
+          git config user.name "Lalittletribu Deploy"
+          git config user.email "actions@github.com"
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Production is already up to date."
+            exit 0
+          fi
+
+          git commit -m "Deploy validated DEV to production"
+          git push
