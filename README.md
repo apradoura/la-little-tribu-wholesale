@@ -1,10 +1,12 @@
-# Lalittletribu — V0.9.7 Desktop Hero
+# Lalittletribu — V0.9.9 DEV Tag Probe
 
-- Mobile : couverture originale de Barbara conservée telle quelle.
-- Desktop : véritable hero horizontal plein écran, construit à partir de la même photo.
-- Aucun visuel fictif : hero-barbara-desktop.jpeg est uniquement un crop de la couverture originale.
-- Titre, sous-titre et CTA sont de vrais éléments HTML sur desktop.
-- CTA desktop et mobile pointent vers la section Nouveautés / offre professionnelle.
-- Les nettoyages catalogue et conditions professionnelles des versions précédentes sont conservés.
+Version de diagnostic temporaire.
 
-Tester d'abord sur l'environnement DEV apradoura avant déploiement PROD.
+Objectif :
+- vérifier si le flux Shopify public actuellement utilisé remonte le champ `tags`;
+- le diagnostic n’apparaît QUE sur l’environnement DEV `apradoura.github.io`;
+- il s’affiche dans la fiche rapide du produit Saint Benoît ;
+- si des tags sont exposés, ils sont listés ;
+- sinon le message « Aucun tag remonté par le flux Shopify actuel » apparaît.
+
+Ne pas déployer cette version en PROD.
