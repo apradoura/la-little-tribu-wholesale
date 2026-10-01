@@ -7,18 +7,13 @@ const campaign={source:qs.get("utm_source")||qs.get("src")||"direct",medium:qs.g
 function money(v){return new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR"}).format(Number(v||0))}
 const ORDER_MIN_HT=300, FREE_SHIPPING_HT=500, SHIPPING_TTC=19;
 function keyName(v){return String(v||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replaceAll("❤️","coeur").replaceAll("❤","coeur")}
-/* Prix PRO : tag Shopify PRO_HT_xx.xx prioritaire, fallback temporaire ensuite. */
+/* Prix PRO : tag Shopify PRO_HT_xx.xx = source unique. */
 function proPriceFor(p){
   const tag=(p.tags||[]).find(t=>/^PRO_HT_\d+(?:[.,]\d{1,2})?$/i.test(String(t).trim()));
-  if(tag){
-    const raw=String(tag).trim().replace(/^PRO_HT_/i,"").replace(",",".");
-    const value=Number(raw);
-    if(Number.isFinite(value))return value;
-  }
-  const n=keyName(p.name);
-  if(n.includes("maxi")&&n.includes("coeur"))return 10;
-  if(n.includes("coeur"))return 11.5;
-  return null
+  if(!tag)return null;
+  const raw=String(tag).trim().replace(/^PRO_HT_/i,"").replace(",",".");
+  const value=Number(raw);
+  return Number.isFinite(value)?value:null;
 }
 function selectionHT(){return state.selection.reduce((sum,x)=>sum+(Number(x.proPrice)||0)*Number(x.qty||0),0)}
 function canOrder(){return selectionHT()>=ORDER_MIN_HT}
