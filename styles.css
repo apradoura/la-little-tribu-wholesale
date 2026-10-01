@@ -873,3 +873,13 @@ img,svg,video,canvas{
     font-size:9px;
   }
 }
+
+
+/* V0.9.12 — test prix PRO via tag Shopify, visible uniquement en DEV */
+.dev-price-source{
+  margin:10px 0 2px;padding:11px 13px;border:1px dashed #b88996;border-radius:12px;
+  background:#fff7fa;color:#49383e;font-size:11px;line-height:1.45
+}
+.dev-price-source strong{display:block;color:#842942;margin-bottom:3px}
+.dev-price-source span{display:block;font-weight:700}
+.dev-price-source small{display:block;margin-top:5px;opacity:.72;overflow-wrap:anywhere}
